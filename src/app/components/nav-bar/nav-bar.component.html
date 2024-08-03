@@ -18,9 +18,13 @@
         id="navbarNav"
       >
         <div class="navbar-nav mx-auto">
-          <a class="nav-link active mx-3" aria-current="page" href="#">Home</a>
-          <a class="nav-link mx-3" href="#">About Us</a>
-          <a class="nav-link mx-3" href="#">Contact</a>
+          <a class="nav-link mx-3" aria-current="page" [routerLink]="['/']"
+            >Home</a
+          >
+          <a class="nav-link mx-3" [routerLink]="['users']">Users List</a>
+          <a class="nav-link mx-3" [routerLink]="['users', 'add-edit']"
+            >Add User</a
+          >
         </div>
       </div>
     </div>
