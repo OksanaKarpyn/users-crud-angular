@@ -26,15 +26,22 @@ export class AddEditUserComponent {
           Validators.maxLength(15),
         ]),
       ],
-      surname: [],
-      fiscalCode: [],
-      address: [],
-      cap: [],
-      city: [],
-      country: [],
-      phone: [],
-      mobile: [],
-      email: [],
+      surname: [''],
+      fiscalCode: [
+        '',
+        Validators.compose([
+          Validators.required,
+          Validators.minLength(16),
+          Validators.maxLength(16),
+        ]),
+      ],
+      address: [''],
+      cap: [''],
+      city: [''],
+      country: [''],
+      phone: [''],
+      mobile: [''],
+      email: ['', Validators.compose([Validators.required, Validators.email])],
     });
   }
 }
