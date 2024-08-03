@@ -24,4 +24,11 @@ export class UsersComponent {
       },
     });
   }
+
+  deleteUser(id: string) {
+    //service.delete user by id
+    // users find by index
+    //if index exist
+    //user.splice(idx,1);
+  }
 }

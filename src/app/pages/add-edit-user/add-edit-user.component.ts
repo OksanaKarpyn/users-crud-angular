@@ -18,6 +18,7 @@ import { ActivatedRoute } from '@angular/router';
 export class AddEditUserComponent {
   form!: UntypedFormGroup;
 
+  id!: string | null;
   constructor(
     fb: FormBuilder,
     private usersService: UsersService,
@@ -50,9 +51,9 @@ export class AddEditUserComponent {
       email: ['', Validators.compose([Validators.required, Validators.email])],
     });
 
-    const id = route.snapshot.paramMap.get('id');
-    if (id) {
-      usersService.getUser(id).subscribe({
+    this.id = route.snapshot.paramMap.get('id');
+    if (this.id) {
+      usersService.getUser(this.id).subscribe({
         next: (userData) => {
           this.form.patchValue(userData);
         },
@@ -61,13 +62,25 @@ export class AddEditUserComponent {
   }
 
   submit() {
-    this.usersService.createUser(this.form.value).subscribe({
-      next: (data) => {
-        console.log(data);
-      },
-      error: (err) => {
-        console.error(err.message);
-      },
-    });
+    if (this.id) {
+      const value = Object.assign({ id: this.id }, this.form.value);
+      this.usersService.updateUser(value).subscribe({
+        next: (data) => {
+          console.log(data);
+        },
+        error: (err) => {
+          console.error(err.message);
+        },
+      });
+    } else {
+      this.usersService.createUser(this.form.value).subscribe({
+        next: (data) => {
+          console.log(data);
+        },
+        error: (err) => {
+          console.error(err.message);
+        },
+      });
+    }
   }
 }
