@@ -3,8 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 
-@Component({//decoratore x decorare le classi
-  selector: 'app-root',//radire del app
+@Component({
+  selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet,
