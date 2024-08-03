@@ -7,6 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { UsersService } from '../../services/users.service';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-add-edit-user',
   standalone: true,
@@ -17,7 +18,11 @@ import { UsersService } from '../../services/users.service';
 export class AddEditUserComponent {
   form!: UntypedFormGroup;
 
-  constructor(fb: FormBuilder, private usersService: UsersService) {
+  constructor(
+    fb: FormBuilder,
+    private usersService: UsersService,
+    private route: ActivatedRoute
+  ) {
     this.form = fb.group({
       name: [
         '',
@@ -44,6 +49,15 @@ export class AddEditUserComponent {
       mobile: [''],
       email: ['', Validators.compose([Validators.required, Validators.email])],
     });
+
+    const id = route.snapshot.paramMap.get('id');
+    if (id) {
+      usersService.getUser(id).subscribe({
+        next: (userData) => {
+          this.form.patchValue(userData);
+        },
+      });
+    }
   }
 
   submit() {

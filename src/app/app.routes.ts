@@ -21,6 +21,11 @@ export const routes: Routes = [
     title: 'Add Edit User',
   },
   {
+    path: 'users/add-edit/:id',
+    component: AddEditUserComponent,
+    title: 'Add Edit User',
+  },
+  {
     path: 'users/:id',
     component: DetailsUserComponent,
     title: 'User Details',
