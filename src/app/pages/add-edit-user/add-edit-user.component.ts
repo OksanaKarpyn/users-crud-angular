@@ -27,6 +27,14 @@ export class AddEditUserComponent {
         ]),
       ],
       surname: [],
+      fiscalCode: [],
+      address: [],
+      cap: [],
+      city: [],
+      country: [],
+      phone: [],
+      mobile: [],
+      email: [],
     });
   }
 }
