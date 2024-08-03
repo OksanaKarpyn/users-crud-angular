@@ -2,7 +2,7 @@
 <pre>{{ form.value | json }}</pre>
 <div class="bg-body-tertiary">
   <div class="container">
-    <form class="row g-3" [formGroup]="form">
+    <form class="row g-3" [formGroup]="form" (ngSubmit)="submit()">
       <div class="col-md-6">
         <label for="name" class="form-label">Name</label>
         <input

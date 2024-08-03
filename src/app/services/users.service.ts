@@ -7,7 +7,7 @@ import { User } from '../models/user';
   providedIn: 'root',
 })
 export class UsersService {
-  readonly url = 'http://127.0.0.1:8000/users';
+  readonly url = 'http://localhost:3000/users';
 
   constructor(private http: HttpClient) {}
 

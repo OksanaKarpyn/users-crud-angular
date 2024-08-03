@@ -44,4 +44,6 @@ export class AddEditUserComponent {
       email: ['', Validators.compose([Validators.required, Validators.email])],
     });
   }
+
+  submit() {}
 }
