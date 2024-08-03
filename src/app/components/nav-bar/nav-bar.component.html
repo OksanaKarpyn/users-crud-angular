@@ -17,18 +17,37 @@
         class="collapse navbar-collapse justify-content-center"
         id="navbarNav"
       >
-        <div class="navbar-nav mx-auto">
-          <a class="nav-link mx-3" aria-current="page" [routerLink]="['/']"
-            >Home</a
-          >
-          <a class="nav-link mx-3" [routerLink]="['users']">Users List</a>
-          <a class="nav-link mx-3" [routerLink]="['users', 'add-edit']"
-            >Add User</a
-          >
-        </div>
+        <ul class="navbar-nav mx-auto nav-pills">
+          <li class="nav-item">
+            <a
+              class="nav-link mx-3"
+              aria-current="page"
+              [routerLink]="['/']"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link mx-3"
+              [routerLink]="['users']"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Users List</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link mx-3"
+              [routerLink]="['users', 'add-edit']"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Add User</a
+            >
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
-
-  <app-under-navbar></app-under-navbar>
 </div>
