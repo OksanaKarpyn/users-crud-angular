@@ -15,5 +15,5 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
   styleUrls:['./app.component.scss' ] 
 })
 export class AppComponent {
-  title = 'nome-del-progetto';
+  
 }
