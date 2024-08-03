@@ -1,1 +1,109 @@
-{}
+{
+  "users": [
+    {
+      "id": "a210",
+      "body": {
+        "name": "Pippi",
+        "surname": "fronco",
+        "fiscalCode": "TTTKSN32559Z128T",
+        "address": "panebianco",
+        "cap": 33444,
+        "city": "verona",
+        "country": "Italy",
+        "phone": "3883333333",
+        "mobile": "3883333333",
+        "email": "oksanakarpyn1@pippo.com"
+      }
+    },
+    {
+      "id": "7ae0",
+      "body": {
+        "name": "Pippi",
+        "surname": "fronco",
+        "fiscalCode": "TTTKSN32559Z128T",
+        "address": "panebianco",
+        "cap": 33444,
+        "city": "verona",
+        "country": "Italy",
+        "phone": "3883333333",
+        "mobile": "3883333333",
+        "email": "oksanakarpyn1@pippo.com"
+      }
+    },
+    {
+      "id": "9aa7",
+      "body": {
+        "name": "Pippi",
+        "surname": "fronco",
+        "fiscalCode": "TTTKSN32559Z128T",
+        "address": "panebianco",
+        "cap": 33444,
+        "city": "verona",
+        "country": "Italy",
+        "phone": "3883333333",
+        "mobile": "3883333333",
+        "email": "oksanakarpyn1@pippo.com"
+      }
+    },
+    {
+      "id": "bf9d",
+      "body": {
+        "name": "Pippi",
+        "surname": "fronco",
+        "fiscalCode": "TTTKSN32559Z128T",
+        "address": "panebianco",
+        "cap": 33444,
+        "city": "verona",
+        "country": "Italy",
+        "phone": "3883333333",
+        "mobile": "3883333333",
+        "email": "oksanakarpyn1@pippo.com"
+      }
+    },
+    {
+      "id": "35e7",
+      "body": {
+        "name": "Pippi",
+        "surname": "fronco",
+        "fiscalCode": "TTTKSN32559Z128T",
+        "address": "panebianco",
+        "cap": 33444,
+        "city": "verona",
+        "country": "Italy",
+        "phone": "3883333333",
+        "mobile": "3883333333",
+        "email": "oksanakarpyn1@pippo.com"
+      }
+    },
+    {
+      "id": "bc8b",
+      "body": {
+        "name": "Pippi",
+        "surname": "fronco",
+        "fiscalCode": "TTTKSN32559Z128T",
+        "address": "panebianco",
+        "cap": 33444,
+        "city": "verona",
+        "country": "Italy",
+        "phone": "3883333333",
+        "mobile": "3883333333",
+        "email": "oksanakarpyn1@pippo.com"
+      }
+    },
+    {
+      "id": "39b3",
+      "body": {
+        "name": "Pippi",
+        "surname": "fronco",
+        "fiscalCode": "TTTKSN32559Z128T",
+        "address": "panebianco",
+        "cap": 33444,
+        "city": "verona",
+        "country": "Italy",
+        "phone": "3883333333",
+        "mobile": "3883333333",
+        "email": "oksanakarpyn1@pippo.com"
+      }
+    }
+  ]
+}
