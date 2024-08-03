@@ -6,6 +6,7 @@ import {
   UntypedFormGroup,
   Validators,
 } from '@angular/forms';
+import { UsersService } from '../../services/users.service';
 @Component({
   selector: 'app-add-edit-user',
   standalone: true,
@@ -16,7 +17,7 @@ import {
 export class AddEditUserComponent {
   form!: UntypedFormGroup;
 
-  constructor(fb: FormBuilder) {
+  constructor(fb: FormBuilder, private usersService: UsersService) {
     this.form = fb.group({
       name: [
         '',
@@ -45,5 +46,14 @@ export class AddEditUserComponent {
     });
   }
 
-  submit() {}
+  submit() {
+    this.usersService.createUser(this.form.value).subscribe({
+      next: (data) => {
+        console.log(data);
+      },
+      error: (err) => {
+        console.error(err.message);
+      },
+    });
+  }
 }
