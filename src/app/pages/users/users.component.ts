@@ -25,8 +25,19 @@ export class UsersComponent {
     });
   }
 
-  deleteUser(id: string) {
+  deleteUser(id?: string) {
     //service.delete user by id
+    console.log('delete', id);
+    if (id) {
+      this.usersService.deleteUser(id).subscribe({
+        next: () => {
+          this.users = this.users.filter((user) => user.id !== id);
+        },
+        error: (err) => {
+          console.error('Error deleting user', err);
+        },
+      });
+    }
     // users find by index
     //if index exist
     //user.splice(idx,1);

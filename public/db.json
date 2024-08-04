@@ -1,32 +1,6 @@
 {
   "users": [
     {
-      "id": "6376",
-      "name": "pippo edit",
-      "surname": "rosso detid",
-      "fiscalCode": "TTTKSN32449Z128T",
-      "address": "panebianco",
-      "cap": 37031,
-      "city": "Verona",
-      "country": "Italy",
-      "phone": "1234567890",
-      "mobile": "1234567890",
-      "email": "pippo@gmail.com"
-    },
-    {
-      "id": "502a",
-      "name": "pippo",
-      "surname": "rosso",
-      "fiscalCode": "TTTKSN32449Z128T",
-      "address": "panebianco",
-      "cap": 37031,
-      "city": "Verona",
-      "country": "Italy",
-      "phone": "1234567890",
-      "mobile": "1234567890",
-      "email": "pippo@gmail.com"
-    },
-    {
       "id": "fb0b",
       "name": "pippo",
       "surname": "rosso",
