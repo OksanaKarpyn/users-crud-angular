@@ -1,1 +1,22 @@
 <h1>Home Page</h1>
+<!-- <pre>{{users | json}}</pre> -->
+<div class="container">
+   <div class="row gap-3">
+      
+         @if(users){
+         
+               @for(user of users; track user.id){
+   
+                  <div class="card">
+                     <img src="https://doodleipsum.com/100x100/avatar-2?i=5983c3a94be9767ae99292c5eacb39fb" class="card-img-top" alt="...">
+                     <div class="card-body">
+                        <h5 class="card-title">{{user.name}}{{user.surname}}</h5>
+                        <p class="card-text">{{user.email}}</p>
+                     </div>
+                  </div>
+               }
+            
+         }
+      
+   </div>
+</div>
