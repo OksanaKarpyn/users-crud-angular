@@ -9,7 +9,8 @@
     .container > a{
         display: flex;
         align-items: center;
-        font-size: 28px;
+        font-size: 3rem;
+        font-weight: 900;
         color: red;
         margin: auto;
        
@@ -17,12 +18,15 @@
     .nav-item{
     display: flex;
     justify-content: center;
+    
 
     }
     .nav-link {
     width: 50%;
+   
     &:hover{
         color:white;
+        background-color: rgb(183, 245, 183);
     }
         
     }
