@@ -30,7 +30,7 @@
           formControlName="fiscalCode"
         />
       </div>
-      <div class="col-12">
+      <div class="col-md-6">
         <label for="address" class="form-label">Address</label>
         <input
           type="text"
@@ -84,7 +84,7 @@
           formControlName="mobile"
         />
       </div>
-      <div class="col-md-6">
+      <div class="col-12">
         <label for="email" class="form-label">Email</label>
         <input
           type="email"
@@ -94,8 +94,9 @@
         />
       </div>
       <div class="col-12">
+     
         <button type="submit" class="btn btn-primary" [disabled]="!form.valid">
-          Add User
+          {{ isEditing ? 'Edit User' : 'Add User' }}
         </button>
       </div>
     </form>

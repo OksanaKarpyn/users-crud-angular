@@ -19,6 +19,7 @@ export class AddEditUserComponent {
   form!: UntypedFormGroup;
 
   id!: string | null;
+  isEditing: boolean = false;
   constructor(
     fb: FormBuilder,
     private usersService: UsersService,
@@ -33,7 +34,7 @@ export class AddEditUserComponent {
           Validators.maxLength(15),
         ]),
       ],
-      surname: [''],
+      surname: ['',Validators.required],
       fiscalCode: [
         '',
         Validators.compose([
@@ -42,17 +43,32 @@ export class AddEditUserComponent {
           Validators.maxLength(16),
         ]),
       ],
-      address: [''],
-      cap: [''],
-      city: [''],
-      country: [''],
+      address: ['',Validators.required],
+      cap: ['',Validators.compose([
+        Validators.required,
+        Validators.minLength(5),
+        Validators.maxLength(5)
+      ])],
+      city: ['',Validators.required],
+      country: ['',Validators.required],
       phone: [''],
-      mobile: [''],
-      email: ['', Validators.compose([Validators.required, Validators.email])],
+      mobile: ['',Validators.compose([
+        Validators.required,
+        Validators.minLength(10),
+        Validators.maxLength(10)
+      ]
+        
+      )],
+      email: ['', 
+        Validators.compose([
+          Validators.required, 
+          Validators.email
+        ])],
     });
 
     this.id = route.snapshot.paramMap.get('id');
     if (this.id) {
+      this.isEditing = true;
       usersService.getUser(this.id).subscribe({
         next: (userData) => {
           this.form.patchValue(userData);
@@ -73,6 +89,7 @@ export class AddEditUserComponent {
         },
       });
     } else {
+      this.isEditing = false;
       this.usersService.createUser(this.form.value).subscribe({
         next: (data) => {
           console.log(data);

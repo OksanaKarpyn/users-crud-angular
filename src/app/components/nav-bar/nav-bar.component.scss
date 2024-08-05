@@ -1,14 +1,32 @@
+
+
 .nav-link {
     width: 25%;
     text-align: center;
 }
 
 @media screen and (max-width:990px) {
-    .nav-link {
-        width: 50%;
-        text-align: center;
+    .container > a{
+        display: flex;
+        align-items: center;
+        font-size: 28px;
+        color: red;
         margin: auto;
+       
     }
+    .nav-item{
+    display: flex;
+    justify-content: center;
+
+    }
+    .nav-link {
+    width: 50%;
+    &:hover{
+        color:white;
+    }
+        
+    }
+    
 
 }
 
