@@ -1,4 +1,4 @@
-import { JsonPipe } from '@angular/common';
+import { CommonModule, JsonPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import {
   FormBuilder,
@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-add-edit-user',
   standalone: true,
-  imports: [ReactiveFormsModule, JsonPipe],
+  imports: [ReactiveFormsModule, JsonPipe,CommonModule],
   templateUrl: './add-edit-user.component.html',
   styleUrl: './add-edit-user.component.scss',
 })
@@ -84,6 +84,7 @@ export class AddEditUserComponent {
         next: (data) => {
           console.log(data);
         },
+        
         error: (err) => {
           console.error(err.message);
         },
@@ -100,4 +101,10 @@ export class AddEditUserComponent {
       });
     }
   }
+  get name() { return this.form.get('name'); }
+  get surname() { return this.form.get('surname'); }
+  get fiscalCode() { return this.form.get('fiscalCode'
+
+
+  ); }
 }

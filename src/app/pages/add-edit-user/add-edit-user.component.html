@@ -1,4 +1,4 @@
-<h1>Add Edit User</h1>
+<h1 class="my-3"><em>Add Edit User</em></h1>
 <!-- <pre>{{ form.value | json }}</pre> -->
 <div class="bg-body-tertiary">
   <div class="container">
@@ -10,7 +10,17 @@
           class="form-control"
           id="name"
           formControlName="name"
+          required
         />
+        <!-- ------------errorre message------ -->
+        <div *ngIf="form.get('name')?.invalid && (form.get('name')?.touched || form.get('name')?.dirty)">
+          <small *ngIf="form.get('name')?.errors?.['required']">Name is required.</small>
+          <small *ngIf="form.get('name')?.errors?.['minlength']">Name must be at least 3 characters long.</small>
+          <small *ngIf="form.get('name')?.errors?.['maxlength']">Name cannot be more than 15 characters long.</small>
+        </div>
+        
+        <!-- ------------errorre message------ -->
+
       </div>
       <div class="col-md-6">
         <label for="surname" class="form-label">Surname</label>
@@ -19,8 +29,16 @@
           class="form-control"
           id="surname"
           formControlName="surname"
+          required
         />
       </div>
+
+       <!-- ------------errorre message------ -->
+      <div *ngIf="form.get('surname')?.invalid && (form.get('surname')?.touched || form.get('surname')?.dirty)">
+        <small *ngIf="form.get('surname')?.errors?.['required']">Surname is required.</small>
+      </div>
+       <!-- -----------errorre message------ -->
+
       <div class="col-md-6">
         <label for="fiscalCode" class="form-label">FiscalCode</label>
         <input
@@ -28,7 +46,17 @@
           class="form-control"
           id="fiscalCode"
           formControlName="fiscalCode"
+          required
         />
+
+        <!-- ------------errorre message------ -->
+        <div *ngIf="form.get('fiscalCode')?.invalid && (form.get('fiscalCode')?.touched || form.get('fiscalCode')?.dirty)">
+          <small *ngIf="form.get('fiscalCode')?.errors?.['required']">fiscalCode is required.</small>
+          <small *ngIf="form.get('fiscalCode')?.errors?.['minlength']">FiscalCode must be at least 15 characters long.</small>
+          <small *ngIf="form.get('fiscalCode')?.errors?.['maxlength']">fiscalCode cannot be more than 15 characters long.</small>
+        </div>
+         <!-- -----------errorre message------ -->
+
       </div>
       <div class="col-md-6">
         <label for="address" class="form-label">Address</label>
@@ -37,7 +65,13 @@
           class="form-control"
           id="address"
           formControlName="address"
+          required
         />
+         <!-- ------------errorre message------ -->
+      <div *ngIf="form.get('address')?.invalid && (form.get('address')?.touched || form.get('address')?.dirty)">
+        <small *ngIf="form.get('address')?.errors?.['required']">Address is required.</small>
+      </div>
+       <!-- -----------errorre message------ -->
       </div>
       <div class="col-12">
         <label for="cap" class="form-label">Cap</label>
@@ -46,6 +80,7 @@
           class="form-control"
           id="cap"
           formControlName="cap"
+          required
         />
       </div>
       <div class="col-md-6">
@@ -55,6 +90,7 @@
           class="form-control"
           id="city"
           formControlName="city"
+          required
         />
       </div>
       <div class="col-md-6">
@@ -64,6 +100,7 @@
           class="form-control"
           id="country"
           formControlName="country"
+          required
         />
       </div>
       <div class="col-md-6">
@@ -73,6 +110,7 @@
           class="form-control"
           id="phone"
           formControlName="phone"
+          required
         />
       </div>
       <div class="col-md-6">
@@ -82,6 +120,7 @@
           class="form-control"
           id="mobile"
           formControlName="mobile"
+          required
         />
       </div>
       <div class="col-12">
@@ -91,6 +130,7 @@
           class="form-control"
           id="email"
           formControlName="email"
+          required
         />
       </div>
       <div class="col-12">
