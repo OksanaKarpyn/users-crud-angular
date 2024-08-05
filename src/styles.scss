@@ -1,16 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 // Importa le variabili e mixins di Bootstrap
 
-
-// @import "~bootstrap/scss/functions";
-// @import "~bootstrap/scss/variables";
-// @import "~bootstrap/scss/mixins";
-
-// // Personalizza le variabili di Bootstrap uso globale
-// $primary: #61dafb;
-// $navbar-bg: #282c34;
-// $link-color: #ffffff;
-// $link-hover-color: #61dafb;
-
-// // Importa il resto di Bootstrap
-// @import "~bootstrap/scss/bootstrap";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100%;
+    margin: 0;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; // Assicura che main occupi almeno l'intera altezza della finestra
+  }
+  
+  .container {
+    flex: 1; // Permette al contenuto di crescere e riempire lo spazio disponibile
+  }
+  
+  .footer {
+    background-color: #f8f9fa; 
+    padding: 1rem; 
+    text-align: center; 
+  }
