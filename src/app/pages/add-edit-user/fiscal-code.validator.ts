@@ -1,14 +1,13 @@
 import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
-import { FiscalCodeValidatorService } from '../../services/fiscal-code-validator.service';
 
-
-export function fiscalCodeValidator(fiscalCodeValidatorService: FiscalCodeValidatorService): ValidatorFn {
+export function fiscalCodeValidator(): ValidatorFn {
+  const cfRegex = /^[A-Z]{6}\d{2}[A-Z]\d{2}[A-Z]\d{3}[A-Z]$/;
   return (control: AbstractControl): ValidationErrors | null => {
     const value = control.value;
     if (!value) {
-      return null;
+      return null; 
     }
-    const isValid = fiscalCodeValidatorService.validate(value);
+    const isValid = cfRegex.test(value);
     return isValid ? null : { invalidFiscalCode: true };
   };
 }

@@ -8,7 +8,6 @@ import {
   Validators,
 } from '@angular/forms';
 import { UsersService } from '../../services/users.service';
-import { FiscalCodeValidatorService } from '../../services/fiscal-code-validator.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { fiscalCodeValidator } from './fiscal-code.validator';
 import { phoneNumberValidator } from './phone-mobile.validator';
@@ -38,7 +37,6 @@ export class AddEditUserComponent {
     private usersService: UsersService,
     private route: ActivatedRoute,
     private router: Router,
-    private fiscalCodeValidatorService: FiscalCodeValidatorService
   ) {
     this.form = this.fb.group({
       name: [
@@ -56,7 +54,7 @@ export class AddEditUserComponent {
           Validators.required,
           Validators.minLength(16),
           Validators.maxLength(16),
-          fiscalCodeValidator(this.fiscalCodeValidatorService)
+          fiscalCodeValidator()
         ],
       ],
       address: ['', Validators.required],
@@ -126,6 +124,9 @@ export class AddEditUserComponent {
       });
     }
   }
+
+
+
 
   get name() {
     return this.form.get('name');
