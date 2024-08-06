@@ -1,4 +1,4 @@
-<h1 class="my-3"><em>Add Edit User</em></h1>
+<h1 class="my-4"><em>Add Edit User</em></h1>
 <!-- <pre>{{ form.value | json }}</pre> -->
 <div class="bg-body-tertiary">
   <div class="container">
@@ -46,14 +46,17 @@
           class="form-control"
           id="fiscalCode"
           formControlName="fiscalCode"
+          pattern="^[a-zA-Z]{6}[0-9]{2}[a-zA-Z][0-9]{2}[a-zA-Z][0-9]{3}[a-zA-Z]$"
           required
         />
 
         <!-- ------------errorre message------ -->
         <div *ngIf="form.get('fiscalCode')?.invalid && (form.get('fiscalCode')?.touched || form.get('fiscalCode')?.dirty)">
           <small *ngIf="form.get('fiscalCode')?.errors?.['required']">fiscalCode is required.</small>
-          <small *ngIf="form.get('fiscalCode')?.errors?.['minlength']">FiscalCode must be at least 15 characters long.</small>
-          <small *ngIf="form.get('fiscalCode')?.errors?.['maxlength']">fiscalCode cannot be more than 15 characters long.</small>
+          <small *ngIf="form.get('fiscalCode')?.errors?.['minlength']">FiscalCode must be at least 16 characters long.</small>
+          <small *ngIf="form.get('fiscalCode')?.errors?.['maxlength']">FiscalCode cannot be more than 16 characters long.</small>
+          <small *ngIf="fiscalCode?.errors?.['invalidFiscalCode']">Fiscal code is invalid.</small>
+
         </div>
          <!-- -----------errorre message------ -->
 
@@ -76,12 +79,19 @@
       <div class="col-12">
         <label for="cap" class="form-label">Cap</label>
         <input
-          type="number"
+          type="text"
           class="form-control"
           id="cap"
           formControlName="cap"
-          required
         />
+        <!-- ------------errorre message------ -->
+        <div *ngIf="form.get('cap')?.invalid && (form.get('cap')?.touched || form.get('cap')?.dirty)">
+          <small *ngIf="form.get('cap')?.errors?.['required']">CAP is required.</small>
+          <small *ngIf="form.get('cap')?.errors?.['minlength']">CAP must be 5 characters long.</small>
+          <small *ngIf="form.get('cap')?.errors?.['maxlength']">CAP cannot be more than 5 characters long.</small>
+          <small *ngIf="form.get('cap')?.errors?.['pattern']">CAP must be numeric.</small>
+        </div>
+         <!-- ------------errorre message------ -->
       </div>
       <div class="col-md-6">
         <label for="city" class="form-label">City</label>
@@ -92,6 +102,11 @@
           formControlName="city"
           required
         />
+        <!-- ------------errorre message------ -->
+        <div *ngIf="form.get('city')?.invalid && (form.get('city')?.touched || form.get('city')?.dirty)">
+          <small *ngIf="form.get('city')?.errors?.['required']">City is required.</small>
+        </div>
+         <!-- ------------errorre message------ -->
       </div>
       <div class="col-md-6">
         <label for="country" class="form-label">Country</label>
@@ -102,6 +117,11 @@
           formControlName="country"
           required
         />
+        <!-- ------------errorre message------ -->
+        <div *ngIf="form.get('city')?.invalid && (form.get('city')?.touched || form.get('city')?.dirty)">
+          <small *ngIf="form.get('city')?.errors?.['required']">City is required.</small>
+        </div>
+         <!-- ------------errorre message------ -->
       </div>
       <div class="col-md-6">
         <label for="phone" class="form-label">Phone</label>
@@ -112,6 +132,11 @@
           formControlName="phone"
           required
         />
+        <!-- ------------errorre message------ -->
+        <div *ngIf="form.get('phone')?.invalid && (form.get('phone')?.touched || form.get('phone')?.dirty)">
+          <small *ngIf="form.get('phone')?.errors?.['invalidPhoneNumber']">Phone number is invalid. It must be numeric</small>
+        </div>
+         <!-- ------------errorre message------ -->
       </div>
       <div class="col-md-6">
         <label for="mobile" class="form-label">Mobile</label>
@@ -122,6 +147,16 @@
           formControlName="mobile"
           required
         />
+        <!-- ------------errorre message------ -->
+        <div *ngIf="form.get('mobile')?.invalid && (form.get('mobile')?.touched || form.get('mobile')?.dirty)">
+          <small *ngIf="form.get('mobile')?.errors?.['required']">Mobile is required.</small>
+          <small *ngIf="form.get('mobile')?.errors?.['invalidPhoneNumber']">Mobile number is invalid. It must be numeric</small>
+          <small *ngIf="form.get('mobile')?.errors?.['minlength']">Mobile must be 10 characters long.</small>
+          <small *ngIf="form.get('mobile')?.errors?.['maxlength']">Mobile cannot be more than 10 characters long.</small>
+        </div>
+
+         <!-- ------------errorre message------ -->
+
       </div>
       <div class="col-12">
         <label for="email" class="form-label">Email</label>
@@ -132,6 +167,12 @@
           formControlName="email"
           required
         />
+        <!-- ------------errorre message------ -->
+        <div *ngIf="form.get('email')?.invalid && (form.get('email')?.touched || form.get('email')?.dirty)">
+          <small *ngIf="form.get('email')?.errors?.['required']">Email is required.</small>
+          <small *ngIf="form.get('email')?.errors?.['email']">Invalid email format.</small>
+        </div>
+        <!-- ------------errorre message------ -->
       </div>
       <div class="col-12">
      
