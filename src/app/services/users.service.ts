@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { User } from '../models/user';
 
 @Injectable({
@@ -8,6 +8,8 @@ import { User } from '../models/user';
 })
 export class UsersService {
   readonly url = 'http://localhost:3000/users';
+  
+  user$: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null);
 
   constructor(private http: HttpClient) {}
 
@@ -28,5 +30,6 @@ export class UsersService {
   deleteUser(id: string): Observable<User> {
     return this.http.delete<User>(`${this.url}/${id}`);
   }
+ 
 
 }
