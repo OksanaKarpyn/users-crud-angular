@@ -11,7 +11,8 @@
       "country": "Italy",
       "phone": "1234567890",
       "mobile": "1234567890",
-      "email": "pippo@gmail.com"
+      "email": "pippo@gmail.com",
+      "password":"123456"
     },
     {
       "id": "bf0f",
@@ -24,7 +25,8 @@
       "country": "Italy",
       "phone": "1234567890",
       "mobile": "1234567890",
-      "email": "pippo@gmail.com"
+      "email": "pippo@gmail.com",
+      "password":"123456"
     },
     {
       "id": "0a11",
@@ -37,7 +39,8 @@
       "country": "Italy",
       "phone": "1234567890",
       "mobile": "1234567890",
-      "email": "pippo@gmail.com"
+      "email": "pippo@gmail.com",
+      "password":"123456"
     },
     {
       "id": "0b1d",
@@ -50,7 +53,8 @@
       "country": "Italy",
       "phone": "33333492562",
       "mobile": "3333392562",
-      "email": "on1@gmail.com"
+      "email": "on1@gmail.com",
+      "password":"123456"
     },
     {
       "id": "2d81",
@@ -63,33 +67,8 @@
       "country": "Italy",
       "phone": "33333492562",
       "mobile": "3333392562",
-      "email": "on1@gmail.com"
-    },
-    {
-      "id": "7e8d",
-      "name": "",
-      "surname": "",
-      "fiscalCode": "",
-      "address": "",
-      "cap": "",
-      "city": "",
-      "country": "",
-      "phone": "",
-      "mobile": "",
-      "email": ""
-    },
-    {
-      "id": "43ea",
-      "name": "",
-      "surname": "",
-      "fiscalCode": "",
-      "address": "",
-      "cap": "",
-      "city": "",
-      "country": "",
-      "phone": "",
-      "mobile": "",
-      "email": ""
+      "email": "on1@gmail.com",
+      "password":"123456"
     },
     {
       "id": "3d09",
@@ -102,7 +81,8 @@
       "country": "italia",
       "phone": "1234568999",
       "mobile": "3883492562",
-      "email": "okssna@hello.com"
+      "email": "okssna@hello.com",
+      "password":"123456"
     }
   ]
 }

@@ -83,6 +83,7 @@ export class AddEditUserComponent {
         '',
         Validators.compose([Validators.required, Validators.email]),
       ],
+      password:['',Validators.compose([Validators.required, Validators.minLength(6)])]
     });
 
     this.id = this.route.snapshot.paramMap.get('id');

@@ -3,12 +3,18 @@ import { HomeComponent } from './pages/home/home.component';
 import { UsersComponent } from './pages/users/users.component';
 import { AddEditUserComponent } from './pages/add-edit-user/add-edit-user.component';
 import { DetailsUserComponent } from './pages/details-user/details-user.component';
+import { LoginComponent } from './pages/login/login.component';
 
 export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
     title: 'Home Page',
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+    title: 'login',
   },
   {
     path: 'users',

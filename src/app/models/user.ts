@@ -10,4 +10,5 @@ export interface User {
   phone?: string; //for international num
   mobile: string; //for international num
   email: string;
+  password?:string;
 }
