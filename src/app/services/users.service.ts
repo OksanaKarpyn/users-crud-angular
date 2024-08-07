@@ -8,10 +8,10 @@ import { User } from '../models/user';
 })
 export class UsersService {
   readonly url = 'http://localhost:3000/users';
-  
+
   user$: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null);
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getUsers(): Observable<Array<User>> {
     return this.http.get<Array<User>>(this.url);
@@ -30,6 +30,9 @@ export class UsersService {
   deleteUser(id: string): Observable<User> {
     return this.http.delete<User>(`${this.url}/${id}`);
   }
- 
+  getProfile(token: string): Observable<User> {
+    return this.http.get<User>('http://localhost:3000/profile', { headers: { 'Authorization': `Bearer ${token}` } });
+
+  }
 
 }
