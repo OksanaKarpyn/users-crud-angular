@@ -20,7 +20,7 @@ export class UsersService {
   }
 
   createUser(user: User): Observable<User> {
-    return this.http.post<User>(this.url, user);
+    return this.http.post<User>('http://localhost:3000/register', user);
   }
   updateUser(user: User): Observable<User> {
     return this.http.put<User>(`${this.url}/${user.id}`, user);
@@ -28,5 +28,5 @@ export class UsersService {
   deleteUser(id: string): Observable<User> {
     return this.http.delete<User>(`${this.url}/${id}`);
   }
-  
+
 }

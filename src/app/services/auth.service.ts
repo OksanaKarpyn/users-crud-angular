@@ -8,17 +8,18 @@ import { User } from '../models/user';
 })
 export class AuthService {
 
-  readonly url = 'http://localhost:3000/users';
+  readonly url = 'http://localhost:3000/login';
 
   constructor(private http: HttpClient) { }
 
   login(credential: Auth): void {
-    this.http.get<Array<User>>(this.url, { params: { email: credential.email } }).subscribe({
-      next: (users) => {
-        const currentUser = users[0];
-        if(currentUser && currentUser.password === credential.password){
+    this.http.post<Array<User>>(this.url,credential).subscribe({
+      next: (user) => {
+        debugger;
+        // const currentUser = users[0];
+        // if(currentUser && currentUser.password === credential.password){
           
-        }
+        // }
       },
       error:(err)=>{
         console.error('user not found');

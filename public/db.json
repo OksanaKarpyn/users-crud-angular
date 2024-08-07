@@ -1,88 +1,18 @@
 {
   "users": [
     {
-      "id": "fb0b",
-      "name": "pippo",
-      "surname": "rosso",
-      "fiscalCode": "TTTKSN32449Z128T",
-      "address": "panebianco",
-      "cap": 37031,
-      "city": "Verona",
-      "country": "Italy",
-      "phone": "1234567890",
-      "mobile": "1234567890",
-      "email": "pippo1@gmail.com",
-      "password":"123456"
-    },
-    {
-      "id": "bf0f",
-      "name": "pippo",
-      "surname": "rosso",
-      "fiscalCode": "TTTKSN32449Z128T",
-      "address": "panebianco",
-      "cap": 37031,
-      "city": "Verona",
-      "country": "Italy",
-      "phone": "1234567890",
-      "mobile": "1234567890",
-      "email": "pippo2@gmail.com",
-      "password":"123456"
-    },
-    {
-      "id": "0a11",
-      "name": "pippo",
-      "surname": "rosso",
-      "fiscalCode": "TTTKSN32449Z128T",
-      "address": "panebianco",
-      "cap": 37031,
-      "city": "Verona",
-      "country": "Italy",
-      "phone": "1234567890",
-      "mobile": "1234567890",
-      "email": "pippo3@gmail.com",
-      "password":"123456"
-    },
-    {
-      "id": "0b1d",
-      "name": "alex",
-      "surname": "Kapryn-Vitari",
-      "fiscalCode": "TTTKSN32229Z128T",
-      "address": "wwwwwww",
-      "cap": 37011,
-      "city": "Bardol",
-      "country": "Italy",
-      "phone": "33333492562",
-      "mobile": "3333392562",
-      "email": "on1@gmail.com",
-      "password":"123456"
-    },
-    {
-      "id": "2d81",
-      "name": "alex",
-      "surname": "Kapryn-Vitari",
-      "fiscalCode": "TTTKSN32229Z128T",
-      "address": "wwwwwww",
-      "cap": 37011,
-      "city": "Bardol",
-      "country": "Italy",
-      "phone": "33333492562",
-      "mobile": "3333392562",
-      "email": "on1@gmail.com",
-      "password":"123456"
-    },
-    {
-      "id": "3d09",
-      "name": "francesa",
-      "surname": "pippo",
-      "fiscalCode": "1234567890123455",
+      "email": "lidia@test.it",
+      "password": "$2a$10$OEBjdod.0LiX/hjo/1GpOeB2aGPLWf7SipbQrTE21Jov0fWpoWk2G",
+      "name": "lidia",
+      "surname": "rossi",
+      "fiscalCode": "KRPKSN92R59Z138F",
       "address": "via gabriele d'anunzio",
-      "cap": 37111,
+      "cap": "37011",
       "city": "bardolino",
       "country": "italia",
       "phone": "1234568999",
-      "mobile": "3883492562",
-      "email": "okssna@hello.com",
-      "password":"123456"
+      "mobile": "+393883492511",
+      "id": "E9cyafm"
     }
   ]
 }
